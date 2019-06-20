@@ -1,0 +1,14 @@
+### IntelliJ IDEA ###
+service/*/.gradle
+service/*/build/
+service/*/!gradle/wrapper/gradle-wrapper.jar
+service/*/.idea/
+service/*/*.iws
+service/*/*.iml
+service/*/*.ipr
+service/*/out/
+service/*/classes/
+service/*/gradle/
+service/*/gradlew
+service/*/gradlew.bat
+.scannerwork
