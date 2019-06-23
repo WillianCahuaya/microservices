@@ -17,3 +17,11 @@ spring:
           timeout: 4
           username: wcahuayaramos@gmail.com
           password: noseusa
+
+#Config to Test
+logging:
+  level:
+    #root: INFO
+    com:
+      boomdev:
+        springcloud: DEBUG
