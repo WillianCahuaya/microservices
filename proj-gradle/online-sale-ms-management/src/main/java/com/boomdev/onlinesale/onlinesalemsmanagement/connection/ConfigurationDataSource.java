@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties("connectiondb")
+@ConfigurationProperties("connection")
 public class ConfigurationDataSource {
 
     private String driverclassname;

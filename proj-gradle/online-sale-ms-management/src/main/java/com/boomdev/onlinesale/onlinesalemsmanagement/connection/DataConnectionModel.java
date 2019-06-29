@@ -11,6 +11,7 @@ public class DataConnectionModel {
     }
 
     public DataConnectionModel(String driverclassname, String url, String username, String password) {
+        super();
         this.driverclassname = driverclassname;
         this.url = url;
         this.username = username;

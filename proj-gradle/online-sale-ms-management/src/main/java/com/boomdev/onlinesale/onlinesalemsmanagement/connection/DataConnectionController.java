@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DataConnectionController {
 
     @Autowired
-    ConfigurationDataSource service;
+    private ConfigurationDataSource service;
 
     @GetMapping("dataconnection")
     public DataConnectionModel getDataConnectionDB(){
