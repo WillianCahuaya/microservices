@@ -7,8 +7,9 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'idea'
 apply plugin: 'java-library'
 
+archivesBaseName = 'online-sale-ms-configserver'
 group = 'com.boomdev.onlinesale'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 sourceCompatibility = '1.8'
 
 configurations {
