@@ -12,8 +12,13 @@ public class DataConnectionController {
     @Autowired
     private ConfigurationDataSource service;
 
-    @GetMapping("dataconnection")
-    public DataConnectionModel getDataConnectionDB(){
-        return service.getConfigDB();
+    @GetMapping("dataconnectionmain")
+    public DataConnectionModel getDataConnectionMain(){
+        return service.getConnection().getPostgres().getMain().getConnection();
+    }
+
+    @GetMapping("dataconnectionreport")
+    public DataConnectionModel getDataConnectionReport(){
+        return service.getConnection().getPostgres().getReport().getConnection();
     }
 }

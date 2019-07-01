@@ -1,6 +1,6 @@
 spring:
   application:
-    name: connection #configuration
+    name: configuration #connection
   cloud:
     config:
       uri: http://localhost:8888/ms-config-server
