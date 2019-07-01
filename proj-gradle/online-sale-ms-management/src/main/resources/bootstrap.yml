@@ -6,3 +6,9 @@ spring:
       uri: http://localhost:8888/ms-config-server
   profiles:
     active: dev,prd
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
