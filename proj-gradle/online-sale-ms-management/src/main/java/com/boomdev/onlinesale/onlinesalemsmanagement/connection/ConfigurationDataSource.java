@@ -4,34 +4,65 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties("connection")
-public class ConfigurationDataSource {
+@ConfigurationProperties("application")
+public class ConfigurationDataSource extends PostgresDataSourceEntity {
 
-    private String driverclassname;
-    private String url;
-    private String username;
-    private String password;
+    private Connection connection;
 
     public ConfigurationDataSource() {
     }
 
-    public DataConnectionModel getConfigDB() {
-        return new DataConnectionModel(driverclassname, url, username, password);
+    public Connection getConnection() {
+        return connection;
     }
 
-    public void setDriverclassname(String driverclassname) {
-        this.driverclassname = driverclassname;
+    public void setConnection(Connection connection) {
+        this.connection = connection;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public static class Connection {
+
+        private Postgres postgres;
+
+        public Postgres getPostgres() {
+            return postgres;
+        }
+
+        public void setPostgres(Postgres postgres) {
+            this.postgres = postgres;
+        }
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public static class Postgres {
+        private Main main;
+        private Main report;
+
+        public Main getMain() {
+            return main;
+        }
+
+        public Main getReport() {
+            return report;
+        }
+
+        public void setMain(Main main) {
+            this.main = main;
+        }
+
+        public void setReport(Main report) {
+            this.report = report;
+        }
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public static class Main extends PostgresDataSourceEntity {
+        public DataConnectionModel getConnection() {
+            return new DataConnectionModel(driverclassname, url, username, password);
+        }
+    }
+
+    public static class Report extends PostgresDataSourceEntity {
+        public DataConnectionModel getConnection() {
+            return new DataConnectionModel(driverclassname, url, username, password);
+        }
     }
 }
