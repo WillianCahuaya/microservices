@@ -17,3 +17,12 @@ spring:
           timeout: 4
           username: wcahuayaramos@gmail.com
           password: noseusa
+          skipSslValidation: true
+          force-pull: true
+          #proxy:
+          #  https:
+          #    host: my-proxy.host.io
+          #    port: '3128'
+          #    nonProxyHosts: example.com
+          #    password: myproxypassword
+          #    username: myproxyusername
