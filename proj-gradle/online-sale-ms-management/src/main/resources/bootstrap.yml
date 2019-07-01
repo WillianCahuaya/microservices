@@ -3,6 +3,6 @@ spring:
     name: connection
   cloud:
     config:
-      uri: http://localhost:8888/ms-config-server/
+      uri: http://localhost:8888/ms-config-server
   profiles:
     active: dev
