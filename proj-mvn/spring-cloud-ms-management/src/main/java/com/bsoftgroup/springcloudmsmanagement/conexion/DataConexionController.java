@@ -10,8 +10,13 @@ public class DataConexionController {
 	@Autowired
 	private ConfigurationDataSource service;
 
-	@GetMapping("dataconexion")
-	public DataConexion getDataConexion() {
-		return service.getData();
+	@GetMapping("dataconexionpostgres")
+	public DataConexion getDataConexionPostgres() {
+		return service.getPostgres().getData();
+	}
+	
+	@GetMapping("dataconexionmysql")
+	public DataConexion getDataConexionMysql() {
+		return service.getMysql().getData();
 	}
 }
