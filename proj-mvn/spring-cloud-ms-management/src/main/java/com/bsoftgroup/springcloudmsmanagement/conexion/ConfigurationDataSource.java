@@ -4,35 +4,36 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties("conexion")
+@ConfigurationProperties("conexiondb")
 public class ConfigurationDataSource {
 
-	private String driverclassname;
-	private String url;
-	private String username;
-	private String password;
+	private Postgres postgres;
+	private Mysql mysql;
 
 	public ConfigurationDataSource() {
 	}
 
-	public DataConexion getData() {
-		return new DataConexion(driverclassname, url, username, password);
+	public Postgres getPostgres() {
+		return postgres;
 	}
 
-	public void setDriverclassname(String driverclassname) {
-		this.driverclassname = driverclassname;
+	public void setPostgres(Postgres postgres) {
+		this.postgres = postgres;
 	}
 
-	public void setUrl(String url) {
-		this.url = url;
+	public Mysql getMysql() {
+		return mysql;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setMysql(Mysql mysql) {
+		this.mysql = mysql;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public static class Postgres extends DataConexionEntity {
+
 	}
 
+	public static class Mysql extends DataConexionEntity {
+
+	}
 }
