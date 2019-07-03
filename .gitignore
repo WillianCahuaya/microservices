@@ -1,17 +1,21 @@
 ### IntelliJ IDEA ###
-proj-gradle/*/.gradle
-proj-gradle/*/build/
-proj-gradle/*/!gradle/wrapper/gradle-wrapper.jar
-proj-gradle/*/.idea/
-proj-gradle/*/*.iws
-proj-gradle/*/*.iml
-proj-gradle/*/*.ipr
-proj-gradle/*/out/
-proj-gradle/*/classes/
-proj-gradle/*/gradle/
-proj-gradle/*/gradlew
-proj-gradle/*/gradlew.bat
+*/*/classes/
+*/*/.gradle/
+*/*/gradle/
+*/*/.idea/
+*/*/build/
+*/*/out/
+
+*/*/gradlew
+*/*/gradlew.bat
+*/*/HELP.md
+
+*/*/!gradle/wrapper/gradle-wrapper.jar
+*/*/*.iws
+*/*/*.iml
+*/*/*.ipr
 .scannerwork
 
-proj-gradle/.zip
+### EXTRA ###
+*/*.zip
 
