@@ -1,4 +1,4 @@
-package com.boomdev.microserviceapibook;
+package com.boomdev.microserviceapirating;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @EnableWebSecurity
 @Configuration
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder authenticationMng) throws Exception{
@@ -21,16 +21,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception{
         httpSecurity.httpBasic().disable().authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/books").permitAll()
-                .antMatchers(HttpMethod.GET, "/books/*").permitAll()
-                .antMatchers(HttpMethod.POST, "/books").hasRole("ADMIN")
-                .antMatchers(HttpMethod.PATCH, "/books/*").hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/books/*").hasRole("ADMIN")
+                .regexMatchers("^/rating\\?bookId.*$").authenticated()
+                .antMatchers(HttpMethod.POST, "/ratings").authenticated()
+                .antMatchers(HttpMethod.PATCH, "ratings/*").hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/ratings/*").hasRole(("ADMIN"))
+                .antMatchers(HttpMethod.GET, "/ratings").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .csrf()
                 .disable();
     }
-
-
 }
