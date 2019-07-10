@@ -1,0 +1,27 @@
+GRADLE COMMAND
+***********************
+gradle bootRun
+gradle build				--Jar is in build folder
+
+
+MVN COMMAND
+***********************
+mvn spring-boot:run
+
+
+JAVA COMMAND
+***********************
+java -jar file.jar
+java -jar -Dspring-profile-s-active=prd file.jar
+java -jar -Dserver-port=8889 online-sale-ms-configserver-1.0.0.jar
+
+
+ENDPOINT
+
+*****configserver
+http://localhost:8888/ms-configserver/connection/dev
+http://localhost:8888/ms-configserver/configuration/dev
+
+*****management
+http://localhost:8084/ms-management/dataconnectionmain
+http://localhost:8084/ms-management/dataconnectionreport

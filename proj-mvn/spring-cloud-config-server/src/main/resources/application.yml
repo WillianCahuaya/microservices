@@ -1,8 +1,7 @@
 server:
   port: 8888
   servlet:
-    context-path: /ms-configserver
-    #configuration and connection to default, dev, prod, qa
+    context-path: /ms-configserver #configuration and connection to default, dev, prod, qa
 
 spring:
   application:

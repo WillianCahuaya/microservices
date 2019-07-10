@@ -1,8 +1,14 @@
 spring:
   application:
-    name: conexion
+    name: configuration #and connection
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://localhost:8888/ms-configserver
   profiles:
     active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
