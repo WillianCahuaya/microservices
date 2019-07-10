@@ -16,6 +16,10 @@
 */*/*.ipr
 .scannerwork
 
+*/*/target/
+*/*/mvnw
+*/*/mvnw.cmd
+
 ### EXTRA ###
 */*.zip
 
