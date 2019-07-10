@@ -1,9 +1,0 @@
-com\bsoftgroup\springcloudmsmanagement\configuration\ConfigurationDataSource.class
-com\bsoftgroup\springcloudmsmanagement\entity\DataSourceEntity.class
-com\bsoftgroup\springcloudmsmanagement\entity\PostgresEntity.class
-com\bsoftgroup\springcloudmsmanagement\entity\ConnectionEntity.class
-com\bsoftgroup\springcloudmsmanagement\controller\DataConnectionController.class
-com\bsoftgroup\springcloudmsmanagement\SpringCloudMsManagementApplication.class
-com\bsoftgroup\springcloudmsmanagement\mapper\DataConnectionMapper.class
-com\bsoftgroup\springcloudmsmanagement\model\DataConnectionModel.class
-com\bsoftgroup\springcloudmsmanagement\mapper\Mapper.class
