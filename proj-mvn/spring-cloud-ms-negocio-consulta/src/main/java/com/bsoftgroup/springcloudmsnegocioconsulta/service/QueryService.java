@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface QueryService {
 
-    List<ServiceModel> getServices(Integer idClient, Integer idCompany) throws AppException;
+    List<ServiceModel> getServices(Integer clientId, Integer companyId) throws AppException;
 
 }

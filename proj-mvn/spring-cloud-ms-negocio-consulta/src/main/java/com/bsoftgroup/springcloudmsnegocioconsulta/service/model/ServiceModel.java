@@ -2,7 +2,7 @@ package com.bsoftgroup.springcloudmsnegocioconsulta.service.model;
 
 public class ServiceModel {
 
-	private Integer code;
+	private Integer id;
 	private String status;
 	private double amount;
 	private ClientModel client;
@@ -11,12 +11,12 @@ public class ServiceModel {
     public ServiceModel() {
     }
 
-    public Integer getCode() {
-        return code;
+    public Integer getId() {
+        return id;
     }
 
-    public void setCode(Integer code) {
-        this.code = code;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getStatus() {

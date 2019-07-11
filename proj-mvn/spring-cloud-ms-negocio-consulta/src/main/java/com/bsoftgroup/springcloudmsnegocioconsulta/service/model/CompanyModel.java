@@ -4,34 +4,34 @@ import java.util.List;
 
 public class CompanyModel {
 
-	private Integer code;
-	private String businessName;
-	private List<ClientModel> clients;
+    private Integer id;
+    private String commercialReason;
+    private List<ClientModel> clients;
 
-	public CompanyModel() {
-	}
+    public CompanyModel() {
+    }
 
-	public Integer getCode() {
-		return code;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setCode(Integer code) {
-		this.code = code;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public String getBusinessName() {
-		return businessName;
-	}
+    public String getCommercialReason() {
+        return commercialReason;
+    }
 
-	public void setBusinessName(String businessName) {
-		this.businessName = businessName;
-	}
+    public void setCommercialReason(String commercialReason) {
+        this.commercialReason = commercialReason;
+    }
 
-	public List<ClientModel> getClients() {
-		return clients;
-	}
+    public List<ClientModel> getClients() {
+        return clients;
+    }
 
-	public void setClients(List<ClientModel> clients) {
-		this.clients = clients;
-	}
+    public void setClients(List<ClientModel> clients) {
+        this.clients = clients;
+    }
 }

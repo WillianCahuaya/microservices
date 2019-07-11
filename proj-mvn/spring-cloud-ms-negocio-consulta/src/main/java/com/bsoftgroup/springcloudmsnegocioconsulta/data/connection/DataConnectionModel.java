@@ -10,8 +10,8 @@ public class DataConnectionModel {
 	public DataConnectionModel() {
 		this.url = "jdbc:postgresql://localhost:5432/postgres";
 		this.driverclassname = "org.postgresql.Driver";
-		this.username = "openpg";
-		this.password = "openpgpwd";
+		this.username = "microservices";
+		this.password = "123";
 	}
 
 	public DataConnectionModel(String driverclassname, String url, String username, String password) {

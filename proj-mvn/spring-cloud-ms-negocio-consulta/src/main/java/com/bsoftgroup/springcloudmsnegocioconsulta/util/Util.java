@@ -22,19 +22,19 @@ public class Util {
             ServiceModel serviceModel = iteratorServices.next();
             ServiceDto serviceDto = new ServiceDto();
 
-            serviceDto.setCode(serviceModel.getCode());
+            serviceDto.setCode(serviceModel.getId());
             serviceDto.setStatus(serviceModel.getStatus());
             serviceDto.setAmount(serviceModel.getAmount());
 
             ClientDto clientDto = new ClientDto();
             if (serviceModel.getClient() != null) {
                 clientDto.setName(serviceModel.getClient().getName());
-                clientDto.setCode(serviceModel.getClient().getCode());
+                clientDto.setCode(serviceModel.getClient().getId());
             }
             serviceDto.setClient(clientDto);
 
             ProductDto productDto = new ProductDto();
-            productDto.setCode(serviceModel.getProduct().getCode());
+            productDto.setCode(serviceModel.getProduct().getId());
             productDto.setDescription(serviceModel.getProduct().getDescription());
             serviceDto.setProduct(productDto);
             servicesDto.add(serviceDto);
@@ -50,18 +50,18 @@ public class Util {
         serviceModel.setAmount(serviceDto.getAmount());
 
         if (serviceDto.getCode() != null)
-            serviceModel.setCode(serviceDto.getCode());
+            serviceModel.setId(serviceDto.getCode());
 
         ClientModel clientModel = new ClientModel();
         if (serviceDto.getClient() != null) {
             clientModel.setName(serviceDto.getClient().getName());
-            clientModel.setCode(new Integer(serviceDto.getClient().getCode()));
+            clientModel.setId(new Integer(serviceDto.getClient().getCode()));
         }
         serviceModel.setClient(clientModel);
 
         ProductModel productModel = new ProductModel();
         if (serviceDto.getProduct() != null) {
-            productModel.setCode(new Integer(serviceDto.getProduct().getCode()));
+            productModel.setId(new Integer(serviceDto.getProduct().getCode()));
             productModel.setDescription(serviceDto.getProduct().getDescription());
         }
         serviceModel.setProduct(productModel);

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ProductModel {
 
-	private Integer code;
+	private Integer id;
 	private String description;
 	private double price;
 	private List<ServiceModel> services;
@@ -12,25 +12,25 @@ public class ProductModel {
 	public ProductModel() {
 	}
 
-	public ProductModel(Integer code, String description) {
+	public ProductModel(Integer id, String description) {
 		super();
-		this.code = code;
+		this.id = id;
 		this.description = description;
 	}
 
-	public ProductModel(Integer code, String description, double price, List<ServiceModel> services) {
-		this.code = code;
+	public ProductModel(Integer id, String description, double price, List<ServiceModel> services) {
+		this.id = id;
 		this.description = description;
 		this.price = price;
 		this.services = services;
 	}
 
-	public Integer getCode() {
-		return code;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setCode(Integer code) {
-		this.code = code;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getDescription() {

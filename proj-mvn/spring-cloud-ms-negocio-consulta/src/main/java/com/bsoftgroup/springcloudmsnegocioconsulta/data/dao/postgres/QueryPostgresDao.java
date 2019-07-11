@@ -8,6 +8,8 @@ import java.util.List;
 import com.bsoftgroup.springcloudmsnegocioconsulta.data.exception.AppException;
 import com.bsoftgroup.springcloudmsnegocioconsulta.data.connection.ConnectionDB;
 import com.bsoftgroup.springcloudmsnegocioconsulta.data.dao.QueryDao;
+import com.bsoftgroup.springcloudmsnegocioconsulta.data.querysql.Sql;
+import com.bsoftgroup.springcloudmsnegocioconsulta.data.querysql.TableField;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ClientModel;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ProductModel;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ServiceModel;
@@ -15,7 +17,7 @@ import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ServiceModel;
 public class QueryPostgresDao implements QueryDao {
 
 	@Override
-	public List<ServiceModel> getServices(Integer idClient, Integer idCompany) throws AppException {
+	public List<ServiceModel> getServices(Integer clientId, Integer companyId) throws AppException {
 
 		List<ServiceModel> services = new ArrayList();
 		ConnectionDB connDB = null;
@@ -27,34 +29,39 @@ public class QueryPostgresDao implements QueryDao {
 			throw new AppException(e.getMessage());
 		}
 
-		String SQL = "SELECT " +
-				"c.codigo as cliente,  " +
-				"c.nombres as nombres " +
-				"p.codigo as producto, " +
-				"p.descripcion as descripcion, " +
-				"p.precio as precio, " +
-				"cp.codigo as recibo, " +
-				"cp.monto as deuda, " +
-				"cp.estado as estado " +
-				"FROM TBL_CLIENTE c " +
-				"INNER JOIN TBL_CLIENTE_PRODUCTO cp ON c.codigo = cp.cliente " +
-				"INNER JOIN TBL_PRODUCTO p ON p.codigo = cp.producto " +
-				"AND c.codigo = ? and c.empresa = ? ";
+		StringBuilder sbSQL = new StringBuilder();
+		sbSQL.append(Sql.SELECT);
+		sbSQL.append(TableField.Client.COL_CLIENTID).append(Sql.SEP);
+		sbSQL.append(TableField.Client.COL_FULLNAME).append(Sql.SEP);
+		sbSQL.append(TableField.Product.COL_PRODUCTID).append(Sql.SEP);
+		sbSQL.append(TableField.Product.COL_DESCRIPTION).append(Sql.SEP);
+		sbSQL.append(TableField.Product.COL_PRICE).append(Sql.SEP);
+		sbSQL.append(TableField.ClientProduct.COL_CLIENTPRODUCTID).append(Sql.SEP);
+		sbSQL.append(TableField.ClientProduct.COL_AMOUNT).append(Sql.SEP);
+		sbSQL.append(TableField.ClientProduct.COL_STATUS).append(Sql.SEP);
+		sbSQL.append(Sql.FROM).append(TableField.CLIENT);
+		sbSQL.append(Sql.INNER_JOIN).append(TableField.CLIENT_PRODUCT);
+		sbSQL.append(Sql.ON).append(TableField.Client.PRE_CLIENTID).append(Sql.EQU).append(TableField.ClientProduct.CLIENTID);
+		sbSQL.append(Sql.INNER_JOIN).append(TableField.PRODUCT);
+		sbSQL.append(Sql.ON).append(TableField.Product.PRE_PRODUCTID).append(Sql.EQU).append(TableField.ClientProduct.PRODUCTID);
+		sbSQL.append(Sql.AND).append(TableField.Client.PRE_CLIENTID).append(Sql.EQU).append(Sql.PARAM);
+		sbSQL.append(Sql.AND).append(TableField.Client.PRE_COMPANYID).append(Sql.EQU).append(Sql.PARAM);
+		System.out.println(sbSQL);
 		try {
 			connDB.getConexion().setAutoCommit(false);
-			pstmt = connDB.getConexion().prepareStatement(SQL);
-			pstmt.setInt(1, idClient);
-			pstmt.setInt(2, idCompany);
+			pstmt = connDB.getConexion().prepareStatement(sbSQL.toString());
+			pstmt.setInt(1, clientId);
+			pstmt.setInt(2, companyId);
 			rs = pstmt.executeQuery();
 
 			connDB.getConexion().commit();
 			while (rs.next()) {
 				ServiceModel service = new ServiceModel();
-				service.setCode(rs.getInt("recibo"));
-				service.setStatus(rs.getString("estado"));
-				service.setClient(new ClientModel(rs.getInt("cliente"), rs.getString("nombres")));
-				service.setProduct(new ProductModel(rs.getInt("producto"), rs.getString("descripcion")));
-				service.setAmount(rs.getInt("deuda"));
+				service.setId(rs.getInt(TableField.ClientProduct.AS_CLIENTPRODUCT));
+				service.setStatus(rs.getString(TableField.ClientProduct.AS_STATUS));
+				service.setClient(new ClientModel(rs.getInt(TableField.Client.AS_CLIENT), rs.getString(TableField.Client.AS_FULLNAME)));
+				service.setProduct(new ProductModel(rs.getInt(TableField.Product.AS_PRODUCT), rs.getString(TableField.Product.AS_DESCRIPTION)));
+				service.setAmount(rs.getInt(TableField.ClientProduct.AS_AMOUNT));
 				services.add(service);
 			}
 		} catch (Exception e) {

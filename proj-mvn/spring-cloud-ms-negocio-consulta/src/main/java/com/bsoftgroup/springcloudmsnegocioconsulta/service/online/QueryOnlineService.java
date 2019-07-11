@@ -14,7 +14,7 @@ public class QueryOnlineService implements QueryService {
 	private QueryDao queryDao;
 
 	@Override
-	public List<ServiceModel> getServices(Integer idClient, Integer idCompany) throws AppException {
-		return queryDao.getServices(idClient, idCompany);
+	public List<ServiceModel> getServices(Integer clientId, Integer companyId) throws AppException {
+		return queryDao.getServices(clientId, companyId);
 	}
 }

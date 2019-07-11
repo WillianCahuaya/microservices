@@ -19,18 +19,18 @@ public class ServiceMapper implements Mapper<ServiceModel, ServiceDto> {
     public ServiceDto toDto(ServiceModel m) {
         if (Objects.isNull(m)) return null;
         ServiceDto d = new ServiceDto();
-        d.setCode(m.getCode());
+        d.setCode(m.getId());
         d.setStatus(m.getStatus());
         d.setAmount(m.getAmount());
         ClientDto client = new ClientDto();
         if (Objects.isNull(m.getClient())) {
-            client.setCode(m.getClient().getCode());
+            client.setCode(m.getClient().getId());
             client.setName(m.getClient().getName());
         }
         d.setClient(client);
         ProductDto product = new ProductDto();
         if (Objects.isNull(m.getProduct())) {
-            product.setCode(m.getProduct().getCode());
+            product.setCode(m.getProduct().getId());
             product.setDescription(m.getProduct().getDescription());
         }
         d.setProduct(product);
@@ -50,18 +50,18 @@ public class ServiceMapper implements Mapper<ServiceModel, ServiceDto> {
     public ServiceModel toModel(ServiceDto d) {
         if (Objects.isNull(d)) return null;
         ServiceModel m = new ServiceModel();
-        m.setCode(d.getCode());
+        m.setId(d.getCode());
         m.setStatus(d.getStatus());
         m.setAmount(d.getAmount());
         ClientModel client = new ClientModel();
         if (Objects.isNull(d.getClient())) {
-            client.setCode(d.getClient().getCode());
+            client.setId(d.getClient().getCode());
             client.setName(d.getClient().getName());
         }
         m.setClient(client);
         ProductModel product = new ProductModel();
         if (Objects.isNull(d.getProduct())) {
-            product.setCode(d.getProduct().getCode());
+            product.setId(d.getProduct().getCode());
             product.setDescription(d.getProduct().getDescription());
         }
         m.setProduct(product);

@@ -22,11 +22,11 @@ public class QueryRestController {
     @Autowired
     private ServiceMapper serviceMapper;
 
-    @GetMapping(path = "/facturacion/idCliente/{idCliente}/idEmpresa/{idEmpresa}")
-    public List<ServiceDto> getServices(@PathVariable("idCliente") Integer idClient,
-                                        @PathVariable("idEmpresa") Integer idCompany) {
+    @GetMapping(path = "/billing/clientId/{clientId}/companyId/{companyId}")
+    public List<ServiceDto> getServices(@PathVariable("clientId") Integer clientId,
+                                        @PathVariable("companyId") Integer companyId) {
         try {
-            List<ServiceModel> serviceModels = queryService.getServices(idClient, idCompany);
+            List<ServiceModel> serviceModels = queryService.getServices(clientId, companyId);
             return serviceMapper.toDto(serviceModels);
         } catch (AppException e) {
             e.printStackTrace();

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ClientModel {
 
-	private Integer code;
+	private Integer id;
 	private String name;
 	private CompanyModel company;
 	private List<ServiceModel> services;
@@ -12,25 +12,25 @@ public class ClientModel {
 	public ClientModel() {
 	}
 
-	public ClientModel(Integer code, String name) {
+	public ClientModel(Integer id, String name) {
 		super();
-		this.code = code;
+		this.id = id;
 		this.name = name;
 	}
 
-	public ClientModel(Integer code, String name, CompanyModel company, List<ServiceModel> services) {
-		this.code = code;
+	public ClientModel(Integer id, String name, CompanyModel company, List<ServiceModel> services) {
+		this.id = id;
 		this.name = name;
 		this.company = company;
 		this.services = services;
 	}
 
-	public Integer getCode() {
-		return code;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setCode(Integer code) {
-		this.code = code;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getName() {
