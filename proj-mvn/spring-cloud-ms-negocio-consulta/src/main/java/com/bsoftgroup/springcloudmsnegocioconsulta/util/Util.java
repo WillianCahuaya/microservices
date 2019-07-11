@@ -1,4 +1,4 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.Controller.mapper;
+package com.bsoftgroup.springcloudmsnegocioconsulta.util;
 
 import com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto.ClientDto;
 import com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto.ProductDto;

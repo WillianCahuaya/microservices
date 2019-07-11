@@ -6,11 +6,13 @@ import com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto.ServiceDto;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ClientModel;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ProductModel;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ServiceModel;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@Component
 public class ServiceMapper implements Mapper<ServiceModel, ServiceDto> {
 
     @Override
