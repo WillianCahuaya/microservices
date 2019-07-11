@@ -1,0 +1,1 @@
+CREATE SCHEMA esqmicroservices AUTHORIZATION postgres;
