@@ -1,12 +1,15 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.dto;
+package com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto;
 
 public class ServiceDto {
 
 	private Integer code;
 	private String status;
-	private Integer amount;
+	private double amount;
 	private ClientDto client;
 	private ProductDto product;
+
+	public ServiceDto() {
+	}
 
 	public Integer getCode() {
 		return code;
@@ -24,11 +27,11 @@ public class ServiceDto {
 		this.status = status;
 	}
 
-	public Integer getAmount() {
+	public double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(Integer amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 

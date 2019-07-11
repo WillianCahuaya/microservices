@@ -1,7 +1,5 @@
 package com.bsoftgroup.springcloudmsnegocioconsulta.data.connection;
 
-import com.bsoftgroup.springcloudmsnegocioconsulta.core.util.DataSourceConfig;
-
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,13 +14,12 @@ public class ConnectionDB {
 	public ConnectionDB() throws Exception {
 
 		try {
-
 			DataSourceConfig dsn = new DataSourceConfig();
 			conn = dsn.dataSource().getConnection();
-
 		} catch (Exception e) {
 			throw new Exception(e.getMessage());
 		}
+
 		try {
 			// conn = ds.getConnection();
 		} catch (Exception sqle) {
@@ -33,7 +30,6 @@ public class ConnectionDB {
 
 	public Connection getConexion() {
 		return this.conn;
-
 	}
 
 	public void closeConnection() throws Exception {

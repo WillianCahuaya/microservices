@@ -1,9 +1,12 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.dto;
+package com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto;
 
 public class ProductDto {
 	private Integer code;
 	private String description;
 	private double price;
+
+	public ProductDto() {
+	}
 
 	public Integer getCode() {
 		return code;

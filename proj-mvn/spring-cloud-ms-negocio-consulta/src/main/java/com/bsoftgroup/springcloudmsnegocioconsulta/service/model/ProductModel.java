@@ -1,21 +1,28 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.model;
+package com.bsoftgroup.springcloudmsnegocioconsulta.service.model;
 
 import java.util.List;
 
 public class ProductModel {
 
 	private Integer code;
-	private String name;
+	private String description;
 	private double price;
 	private List<ServiceModel> services;
 
 	public ProductModel() {
 	}
 
-	public ProductModel(Integer code, String name) {
+	public ProductModel(Integer code, String description) {
 		super();
 		this.code = code;
-		this.name = name;
+		this.description = description;
+	}
+
+	public ProductModel(Integer code, String description, double price, List<ServiceModel> services) {
+		this.code = code;
+		this.description = description;
+		this.price = price;
+		this.services = services;
 	}
 
 	public Integer getCode() {
@@ -26,12 +33,12 @@ public class ProductModel {
 		this.code = code;
 	}
 
-	public String getName() {
-		return name;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public double getPrice() {

@@ -3,7 +3,7 @@ package com.bsoftgroup.springcloudmsnegocioconsulta.data.dao;
 import java.util.List;
 
 import com.bsoftgroup.springcloudmsnegocioconsulta.data.exception.AppException;
-import com.bsoftgroup.springcloudmsnegocioconsulta.model.ServiceModel;
+import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ServiceModel;
 
 public interface QueryDao {
 

@@ -1,10 +1,13 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.dto;
+package com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto;
 
 public class ClientDto {
 
     private Integer code;
     private String name;
     private CompanyDto company;
+
+    public ClientDto() {
+    }
 
     public Integer getCode() {
         return code;

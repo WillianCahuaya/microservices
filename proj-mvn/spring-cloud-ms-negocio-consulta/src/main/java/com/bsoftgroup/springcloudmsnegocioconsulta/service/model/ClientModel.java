@@ -1,4 +1,4 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.model;
+package com.bsoftgroup.springcloudmsnegocioconsulta.service.model;
 
 import java.util.List;
 
@@ -16,6 +16,13 @@ public class ClientModel {
 		super();
 		this.code = code;
 		this.name = name;
+	}
+
+	public ClientModel(Integer code, String name, CompanyModel company, List<ServiceModel> services) {
+		this.code = code;
+		this.name = name;
+		this.company = company;
+		this.services = services;
 	}
 
 	public Integer getCode() {

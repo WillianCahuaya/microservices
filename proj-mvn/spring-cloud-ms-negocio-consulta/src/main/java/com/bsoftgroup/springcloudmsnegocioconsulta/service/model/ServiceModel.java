@@ -1,4 +1,4 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.model;
+package com.bsoftgroup.springcloudmsnegocioconsulta.service.model;
 
 public class ServiceModel {
 
@@ -8,6 +8,8 @@ public class ServiceModel {
 	private ClientModel client;
 	private ProductModel product;
 
+    public ServiceModel() {
+    }
 
     public Integer getCode() {
         return code;

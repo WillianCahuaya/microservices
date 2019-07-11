@@ -8,9 +8,9 @@ import java.util.List;
 import com.bsoftgroup.springcloudmsnegocioconsulta.data.exception.AppException;
 import com.bsoftgroup.springcloudmsnegocioconsulta.data.connection.ConnectionDB;
 import com.bsoftgroup.springcloudmsnegocioconsulta.data.dao.QueryDao;
-import com.bsoftgroup.springcloudmsnegocioconsulta.model.ClientModel;
-import com.bsoftgroup.springcloudmsnegocioconsulta.model.ProductModel;
-import com.bsoftgroup.springcloudmsnegocioconsulta.model.ServiceModel;
+import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ClientModel;
+import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ProductModel;
+import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ServiceModel;
 
 public class QueryPostgresDao implements QueryDao {
 
