@@ -4,6 +4,8 @@ server:
     context-path: /ms-businessquery
 
 spring:
+  application:
+    name: msbusinessquery
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
@@ -11,3 +13,8 @@ spring:
       hibernate:
         temp:
           use_jdbc_metadata_defaults: false
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka

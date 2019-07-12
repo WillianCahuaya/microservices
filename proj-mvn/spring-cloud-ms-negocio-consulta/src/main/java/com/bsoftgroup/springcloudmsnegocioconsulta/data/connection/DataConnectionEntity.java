@@ -1,20 +1,20 @@
 package com.bsoftgroup.springcloudmsnegocioconsulta.data.connection;
 
-public class DataConnectionModel {
+public class DataConnectionEntity {
 
 	private String driverclassname;
 	private String url;
 	private String username;
 	private String password;
 
-	public DataConnectionModel() {
+	public DataConnectionEntity() {
 		this.url = "jdbc:postgresql://localhost:5432/ms_db";
 		this.driverclassname = "org.postgresql.Driver";
 		this.username = "postgres";
 		this.password = "123";
 	}
 
-	public DataConnectionModel(String driverclassname, String url, String username, String password) {
+	public DataConnectionEntity(String driverclassname, String url, String username, String password) {
 		this.driverclassname = driverclassname;
 		this.url = url;
 		this.username = username;

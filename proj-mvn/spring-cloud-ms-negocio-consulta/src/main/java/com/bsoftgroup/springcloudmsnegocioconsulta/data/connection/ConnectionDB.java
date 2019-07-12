@@ -20,12 +20,6 @@ public class ConnectionDB {
 			throw new Exception(e.getMessage());
 		}
 
-		try {
-			// conn = ds.getConnection();
-		} catch (Exception sqle) {
-			throw new Exception(sqle.getMessage());
-		}
-
 	}
 
 	public Connection getConexion() {
@@ -54,7 +48,6 @@ public class ConnectionDB {
 			try {
 				conn.close();
 			} catch (SQLException ex) {
-				// System.out.println(ex.getMessage());
 				throw new Exception(ex.getMessage());
 			}
 		}
@@ -62,7 +55,6 @@ public class ConnectionDB {
 			try {
 				rs.close();
 			} catch (SQLException ex) {
-				// System.out.println(ex.getMessage());
 				throw new Exception(ex.getMessage());
 			}
 		}
@@ -71,7 +63,6 @@ public class ConnectionDB {
 			try {
 				stmt.close();
 			} catch (SQLException ex) {
-				// System.out.println(ex.getMessage());
 				throw new Exception(ex.getMessage());
 			}
 		}
@@ -79,7 +70,6 @@ public class ConnectionDB {
 			try {
 				cstmt.close();
 			} catch (SQLException ex) {
-				// System.out.println(ex.getMessage());
 				throw new Exception(ex.getMessage());
 			}
 		}
@@ -87,7 +77,6 @@ public class ConnectionDB {
 			try {
 				pstmt.close();
 			} catch (SQLException ex) {
-				// System.out.println(ex.getMessage());
 				throw new Exception(ex.getMessage());
 			}
 		}
