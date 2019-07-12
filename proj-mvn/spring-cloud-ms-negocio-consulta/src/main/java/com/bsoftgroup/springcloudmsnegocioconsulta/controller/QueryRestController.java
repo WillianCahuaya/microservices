@@ -1,7 +1,7 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.Controller;
+package com.bsoftgroup.springcloudmsnegocioconsulta.controller;
 
-import com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto.ServiceDto;
-import com.bsoftgroup.springcloudmsnegocioconsulta.Controller.mapper.ServiceMapper;
+import com.bsoftgroup.springcloudmsnegocioconsulta.controller.dto.ServiceDto;
+import com.bsoftgroup.springcloudmsnegocioconsulta.controller.mapper.ServiceMapper;
 import com.bsoftgroup.springcloudmsnegocioconsulta.data.exception.AppException;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.QueryService;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ServiceModel;
@@ -22,7 +22,7 @@ public class QueryRestController {
     @Autowired
     private ServiceMapper serviceMapper;
 
-    @GetMapping(path = "/billing/clientId/{clientId}/companyId/{companyId}")
+    @GetMapping(path = "/billing/clients/{clientId}/companies/{companyId}")
     public List<ServiceDto> getServices(@PathVariable("clientId") Integer clientId,
                                         @PathVariable("companyId") Integer companyId) {
         try {

@@ -5,9 +5,11 @@ import com.bsoftgroup.springcloudmsnegocioconsulta.data.exception.AppException;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.QueryService;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ServiceModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class QueryOnlineService implements QueryService {
 
 	@Autowired

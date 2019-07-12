@@ -8,9 +8,9 @@ public class DataConnectionModel {
 	private String password;
 
 	public DataConnectionModel() {
-		this.url = "jdbc:postgresql://localhost:5432/postgres";
+		this.url = "jdbc:postgresql://localhost:5432/ms_db";
 		this.driverclassname = "org.postgresql.Driver";
-		this.username = "microservices";
+		this.username = "postgres";
 		this.password = "123";
 	}
 

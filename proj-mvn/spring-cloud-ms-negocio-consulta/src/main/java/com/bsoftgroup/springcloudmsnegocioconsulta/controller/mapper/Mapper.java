@@ -1,4 +1,4 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.Controller.mapper;
+package com.bsoftgroup.springcloudmsnegocioconsulta.controller.mapper;
 
 import java.util.List;
 

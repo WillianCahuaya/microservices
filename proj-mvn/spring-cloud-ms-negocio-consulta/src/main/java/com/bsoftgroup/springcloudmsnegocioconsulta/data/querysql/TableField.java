@@ -52,7 +52,7 @@ public interface TableField {
     }
 
     interface ClientProduct{
-        String PRE = "clpr";
+        String PRE = "clpr.";
         String CLIENTPRODUCTID = "clientproductid";
         String CLIENTID = "clientid";
         String PRODUCTID = "productid";

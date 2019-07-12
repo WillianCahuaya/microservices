@@ -1,11 +1,11 @@
 package com.bsoftgroup.springcloudmsnegocioconsulta.util;
 
-import com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto.ClientDto;
-import com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto.ProductDto;
+import com.bsoftgroup.springcloudmsnegocioconsulta.controller.dto.ClientDto;
+import com.bsoftgroup.springcloudmsnegocioconsulta.controller.dto.ProductDto;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ClientModel;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ProductModel;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ServiceModel;
-import com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto.ServiceDto;
+import com.bsoftgroup.springcloudmsnegocioconsulta.controller.dto.ServiceDto;
 
 import java.util.ArrayList;
 import java.util.Iterator;

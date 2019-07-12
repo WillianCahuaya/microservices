@@ -13,7 +13,9 @@ import com.bsoftgroup.springcloudmsnegocioconsulta.data.querysql.TableField;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ClientModel;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ProductModel;
 import com.bsoftgroup.springcloudmsnegocioconsulta.service.model.ServiceModel;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class QueryPostgresDao implements QueryDao {
 
 	@Override
@@ -38,12 +40,12 @@ public class QueryPostgresDao implements QueryDao {
 		sbSQL.append(TableField.Product.COL_PRICE).append(Sql.SEP);
 		sbSQL.append(TableField.ClientProduct.COL_CLIENTPRODUCTID).append(Sql.SEP);
 		sbSQL.append(TableField.ClientProduct.COL_AMOUNT).append(Sql.SEP);
-		sbSQL.append(TableField.ClientProduct.COL_STATUS).append(Sql.SEP);
-		sbSQL.append(Sql.FROM).append(TableField.CLIENT);
-		sbSQL.append(Sql.INNER_JOIN).append(TableField.CLIENT_PRODUCT);
-		sbSQL.append(Sql.ON).append(TableField.Client.PRE_CLIENTID).append(Sql.EQU).append(TableField.ClientProduct.CLIENTID);
-		sbSQL.append(Sql.INNER_JOIN).append(TableField.PRODUCT);
-		sbSQL.append(Sql.ON).append(TableField.Product.PRE_PRODUCTID).append(Sql.EQU).append(TableField.ClientProduct.PRODUCTID);
+		sbSQL.append(TableField.ClientProduct.COL_STATUS);
+		sbSQL.append(Sql.FROM).append(Sql.SCHEMA).append(TableField.CLIENT);
+		sbSQL.append(Sql.INNER_JOIN).append(Sql.SCHEMA).append(TableField.CLIENT_PRODUCT);
+		sbSQL.append(Sql.ON).append(TableField.Client.PRE_CLIENTID).append(Sql.EQU).append(TableField.ClientProduct.PRE_CLIENTID);
+		sbSQL.append(Sql.INNER_JOIN).append(Sql.SCHEMA).append(TableField.PRODUCT);
+		sbSQL.append(Sql.ON).append(TableField.Product.PRE_PRODUCTID).append(Sql.EQU).append(TableField.ClientProduct.PRE_PRODUCTID);
 		sbSQL.append(Sql.AND).append(TableField.Client.PRE_CLIENTID).append(Sql.EQU).append(Sql.PARAM);
 		sbSQL.append(Sql.AND).append(TableField.Client.PRE_COMPANYID).append(Sql.EQU).append(Sql.PARAM);
 		System.out.println(sbSQL);

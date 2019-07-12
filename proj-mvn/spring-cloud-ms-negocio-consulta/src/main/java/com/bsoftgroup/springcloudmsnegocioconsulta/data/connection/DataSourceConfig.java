@@ -6,7 +6,12 @@ import com.bsoftgroup.springcloudmsnegocioconsulta.data.connection.DataConnectio
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
@@ -22,5 +27,23 @@ public class DataSourceConfig {
 		dataSource.setPassword(dataConnectionModel.getPassword());
 		return dataSource;
 	}
+
+//	@Bean(name = "entityManagerFactory")
+//	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+//		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+//
+//		JpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
+//		Properties props = new Properties();
+//		props.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+//		props.setProperty("hibernate.show_sql", "true");
+//		props.setProperty("hibernate.hbm2ddl.auto", "update");
+//
+//		factory.setJpaVendorAdapter(jpaVendorAdapter);
+//		factory.setDataSource(dataSource());
+//		factory.setJpaProperties(props);
+////		factory.setPackagesToScan("br.com.ciaware.springmvc.ensaio.models");
+//
+//		return factory;
+//	}
 
 }

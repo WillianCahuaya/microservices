@@ -4,4 +4,4 @@
 
 CREATE TABLESPACE ts_data_microservices
   OWNER postgres
-  LOCATION 'C:\\dbpostgres\\ts_data_microservices';
+  LOCATION 'D:\\db_postgres\\ts_data_microservices';

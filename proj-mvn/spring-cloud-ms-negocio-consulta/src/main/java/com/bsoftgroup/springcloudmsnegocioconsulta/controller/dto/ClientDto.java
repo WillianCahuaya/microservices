@@ -1,4 +1,4 @@
-package com.bsoftgroup.springcloudmsnegocioconsulta.Controller.dto;
+package com.bsoftgroup.springcloudmsnegocioconsulta.controller.dto;
 
 public class ClientDto {
 
