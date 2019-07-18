@@ -1,0 +1,8 @@
+GROUP
+	com.boomdev.onlinesale
+ARTIFACT								 PORT		 CONTEXT_-PATH			 APPLICATION-NAME
+	online-sale-ms-config-server		|8888		|cp-ms-configserver		|ap-ms-configserver
+	online-sale-ms-management
+	online-sale-ms-discover
+	online-sale-ms-business-query
+	online-sale-ms-bus-query

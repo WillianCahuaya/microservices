@@ -14,33 +14,3 @@ JAVA COMMAND
 java -jar file.jar
 java -jar -Dspring-profile-s-active=prd file.jar
 java -jar -Dserver-port=8889 online-sale-ms-configserver-1.0.0.jar
-
-
-ENDPOINT
-
-*****configserver
-http://localhost:8888/ms-configserver/connection/dev
-http://localhost:8888/ms-configserver/configuration/dev
-
-*****management
-http://localhost:8084/ms-management/dataconnectionmain
-http://localhost:8084/ms-management/dataconnectionreport
-
-*****query
-http://localhost:8081/ms-businessquery/billing/clients/1/companies/1
-
-
-****************QUERY_SQL
-SELECT cl.clientid as Client , 
-	cl.fullname as FullName , 
-	pr.productid as Product , 
-	pr.description as Description , 
-	pr.price as Price , 
-	clpr.clientproductid as Receipt , 
-	clpr.amount as Debt , 
-	clpr.status as Status 
-FROM schmicroservices.tbl_client cl 
-INNER JOIN schmicroservices.tbl_client_product clpr ON clpr.clientid = cl.clientid 
-INNER JOIN schmicroservices.tbl_product pr ON pr.productid = clpr.productid 
-AND cl.clientid = 1 
-AND cl.companyid = 1

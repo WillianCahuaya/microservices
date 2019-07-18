@@ -1,0 +1,29 @@
+
+server:
+  port: 8888
+  servlet:
+    context-path: /cp-ms-configserver #configuration and connection to default, dev, prod, qa
+
+spring:
+  application:
+    name: ap-ms-configserver
+  cloud:
+    config:
+      server:
+        git:
+          #uri: file:///GITBB//microservices//git-config-repo
+          uri: https://github.com/WillianCahuaya/microservices.git
+          default-label: develop
+          searchPaths: /git-config-repo
+          timeout: 4
+          username: wcahuayaramos@gmail.com
+          password: noseusa
+          skipSslValidation: true
+          force-pull: true
+          #proxy:
+          #  https:
+          #    host: my-proxy.host.io
+          #    port: '3128'
+          #    nonProxyHosts: example.com
+          #    password: myproxypassword
+          #    username: myproxyusername

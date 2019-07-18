@@ -8,17 +8,6 @@ public class DataConnectionEntity {
 	private String password;
 
 	public DataConnectionEntity() {
-		this.url = "jdbc:postgresql://localhost:5432/ms_db";
-		this.driverclassname = "org.postgresql.Driver";
-		this.username = "postgres";
-		this.password = "123";
-	}
-
-	public DataConnectionEntity(String driverclassname, String url, String username, String password) {
-		this.driverclassname = driverclassname;
-		this.url = url;
-		this.username = username;
-		this.password = password;
 	}
 
 	public String getDriverclassname() {

@@ -13,21 +13,22 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class DataSourceConfig {
 
-	public static final String URL_CONN = "http://localhost:8084/ms-management/dataconnectionmain";
+    public static final String URL_CONN = "http://localhost:8084/ms-management/dataconnectionmain";
 
-	@Bean(name = "dataSource")
-	public DataSource dataSource() {
-		ResponseEntity<DataConnectionEntity> responseEntity = new RestTemplate().getForEntity(URL_CONN, DataConnectionEntity.class);
-		return getDataConnectionEntity(responseEntity.getBody());
-	}
+    @Bean(name = "dataSource")
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        DataConnectionEntity dataConnection = getDataConnectionEntity();
+        dataSource.setDriverClassName(dataConnection.getDriverclassname());
+        dataSource.setUrl(dataConnection.getUrl());
+        dataSource.setUsername(dataConnection.getUsername());
+        dataSource.setPassword(dataConnection.getPassword());
+        return dataSource;
+    }
 
-	private DataSource getDataConnectionEntity(DataConnectionEntity dataConnection){
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(dataConnection.getDriverclassname());
-		dataSource.setUrl(dataConnection.getUrl());
-		dataSource.setUsername(dataConnection.getUsername());
-		dataSource.setPassword(dataConnection.getPassword());
-		return dataSource;
-	}
+    private DataConnectionEntity getDataConnectionEntity() {
+        ResponseEntity<DataConnectionEntity> responseEntity = new RestTemplate().getForEntity(URL_CONN, DataConnectionEntity.class);
+        return responseEntity.getBody();
+    }
 
 }

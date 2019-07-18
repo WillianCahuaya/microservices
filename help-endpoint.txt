@@ -1,0 +1,14 @@
+ENDPOINT
+
+*****configserver
+http://localhost:8888/ms-configserver/connection/dev
+http://localhost:8888/ms-configserver/configuration/dev
+
+*****management
+http://localhost:8084/ms-management/dataconnectionmain
+http://localhost:8084/ms-management/dataconnectionreport
+POST : http://localhost:8084/ms-management/actuator/refresh
+
+*****query
+http://localhost:8081/ms-businessquery/billing/clients/1/companies/1
+
