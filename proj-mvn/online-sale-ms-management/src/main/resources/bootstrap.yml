@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: configuration #and connection
+  cloud:
+    config:
+      uri: http://localhost:8888/cp-ms-configserver
+  profiles:
+    active: asus
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,8 +1,16 @@
 GROUP
 	com.boomdev.onlinesale
+
 ARTIFACT								 PORT		 CONTEXT_-PATH			 APPLICATION-NAME
 	online-sale-ms-config-server		|8888		|cp-ms-configserver		|ap-ms-configserver
-	online-sale-ms-management
+	online-sale-ms-management			|8084		|cp-ms-management		|configuration (name of file)
 	online-sale-ms-discover
 	online-sale-ms-business-query
 	online-sale-ms-bus-query
+	
+FILE
+	configuration.properties
+	configuration-asus.properties
+	configuration-dev.properties
+	configuration-prd.properties
+	configuration-qa.properties
