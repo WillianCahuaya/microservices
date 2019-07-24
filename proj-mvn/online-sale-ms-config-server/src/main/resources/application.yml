@@ -2,11 +2,11 @@
 server:
   port: 8888
   servlet:
-    context-path: /cp-ms-configserver #configuration and connection to default, dev, prod, qa
+    context-path: /ctxpath-ms-configserver #configuration and connection to default, dev, prod, qa
 
 spring:
   application:
-    name: ap-ms-configserver
+    name: appname-ms-configserver
   cloud:
     config:
       server:

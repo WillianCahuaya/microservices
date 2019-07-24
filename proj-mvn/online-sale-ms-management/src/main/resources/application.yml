@@ -1,5 +1,5 @@
 server:
   port: 8084
   servlet:
-    context-path: /cp-ms-management
+    context-path: /ctxpath-ms-management
 

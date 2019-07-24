@@ -1,14 +1,17 @@
 ENDPOINT
 
 *****configserver
-http://localhost:8888/cp-ms-configserver/connection/dev
-http://localhost:8888/cp-ms-configserver/configuration/dev
+http://localhost:8888/ctxpath-ms-configserver/connection/dev
+http://localhost:8888/ctxpath-ms-configserver/configuration/dev
 
 *****management
-http://localhost:8084/cp-ms-management/dataconnectionmain
-http://localhost:8084/cp-ms-management/dataconnectionreport
-POST : http://localhost:8084/ms-management/actuator/refresh
+http://localhost:8084/ctxpath-ms-management/dataconnectionmain
+http://localhost:8084/ctxpath-ms-management/dataconnectionreport
+POST : http://localhost:8084/ctxpath-ms-management/actuator/refresh
+
+*****discoverserver
+http://localhost:8761/ctxpath-ms-discoverserver
 
 *****query
-http://localhost:8081/ms-businessquery/billing/clients/1/companies/1
+http://localhost:8081/ctxpath-ms-businessquery/billing/clients/1/companies/1
 
