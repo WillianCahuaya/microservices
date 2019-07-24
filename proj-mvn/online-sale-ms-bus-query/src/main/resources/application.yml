@@ -1,0 +1,11 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /ctxpath-ms-busquery
+
+spring:
+  application:
+    name: appname-ms-busquery
+
+#ms-consulta.ribbon.listOfServers=http://localhost:8081, http://localhost:8082
+eureka.client.service-url.defaultzone=http://localhost:8761/eurekaserver

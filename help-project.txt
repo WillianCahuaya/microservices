@@ -13,6 +13,7 @@ DEPENDENCIES
 	online-sale-ms-management					=SpringBootDevTools, ConfigClient, SpringBootActuator, SpringWebStarter
 	online-sale-ms-discover-server				=SpringBootDevTools, ConfigClient, SpringBootActuator, EurekaServer
 	online-sale-ms-business-query				=SpringBootDevTools, SpringBootActuator, SpringWebStarter, SpringDataJPA, PostgresSQLDriver
+	online-sale-ms-bus-query					=SpringBootDevTools, SpringBootActuator, SpringWebStarter, EurekaDiscoveryClient, OpenFeign, Ribbon
 	
 FILE
 	configuration.properties

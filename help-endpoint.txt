@@ -12,6 +12,6 @@ POST : http://localhost:8084/ctxpath-ms-management/actuator/refresh
 *****discoverserver
 http://localhost:8761/ctxpath-ms-discoverserver
 
-*****query
+*****businessquery
 http://localhost:8081/ctxpath-ms-businessquery/billing/clients/1/companies/1
 
