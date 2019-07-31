@@ -1,7 +1,7 @@
 package com.boomdev.onlinesale.onlinesalemsbusinessquery.data.dao.postgres;
 
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.connection.ConnectionDB;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.dao.QueryDao;
+import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.dao.BillingDao;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.exception.AppException;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.querysql.Sql;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.querysql.TableField;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class QueryPostgresDao implements QueryDao {
+public class BillingPostgresDao implements BillingDao {
 
 	@Override
 	public List<ServiceModel> getServices(Integer clientId, Integer companyId) throws AppException {

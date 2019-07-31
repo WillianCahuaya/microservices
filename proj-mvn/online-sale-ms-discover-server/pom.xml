@@ -59,6 +59,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>onlinesale-msdiscoverserver</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

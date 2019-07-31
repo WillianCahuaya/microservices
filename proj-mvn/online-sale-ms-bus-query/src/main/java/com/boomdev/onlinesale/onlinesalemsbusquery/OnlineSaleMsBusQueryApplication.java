@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients("com.boomdev.onlinesale.onlinesalemsbusquery.interfaces")
+@EnableFeignClients("com.boomdev.onlinesale.onlinesalemsbusquery.client.feign")
 public class OnlineSaleMsBusQueryApplication {
 
 	public static void main(String[] args) {

@@ -13,3 +13,8 @@ spring:
       hibernate:
         temp:
           use_jdbc_metadata_defaults: false
+
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/

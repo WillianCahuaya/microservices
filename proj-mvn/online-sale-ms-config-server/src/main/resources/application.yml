@@ -27,3 +27,8 @@ spring:
           #    nonProxyHosts: example.com
           #    password: myproxypassword
           #    username: myproxyusername
+
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/

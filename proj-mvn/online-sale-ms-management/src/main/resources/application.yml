@@ -3,3 +3,7 @@ server:
   servlet:
     context-path: /ctxpath-ms-management
 
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/
