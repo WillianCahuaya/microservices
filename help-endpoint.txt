@@ -39,15 +39,15 @@ ARTIFACT								 		 PORT		 CONTEXT_-PATH			 		 APPLICATION-NAME
 	online-sale-ms-management					|8084		|ctxpath-ms-management			|configuration (name of file)
 	online-sale-ms-business-query				|8081		|ctxpath-ms-businessquery		|appname-ms-businessquery
 	online-sale-ms-bus-query					|8091		|ctxpath-ms-busquery			|appname-ms-busquery
-	online-sale-ms-apigateway					|8765		|ctxpath-ms-apigateway			|appname-ms-apigateway
+	online-sale-ms-apigateway					|8765		|								|appname-ms-apigateway
 	
 DEPENDENCIES
 	online-sale-ms-discover-server				=SpringBootDevTools, SpringBootActuator, ConfigClient, EurekaServer
 	online-sale-ms-config-server				=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, ConfigServer
-	online-sale-ms-management					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, ConfigClient, SpringWebStarter
-	online-sale-ms-business-query				=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, SpringDataJPA, PostgresSQLDriver, lombok
-	online-sale-ms-bus-query					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, EurekaDiscoveryClient, OpenFeign, Ribbon
-	online-sale-ms-bus-query					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter
+	online-sale-ms-management					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, Lombok, ConfigClient, 
+	online-sale-ms-business-query				=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, Lombok, SpringDataJPA, PostgresSQLDriver, Sleuth
+	online-sale-ms-bus-query					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, Lombok, OpenFeign, Ribbon, Sleuth
+	online-sale-ms-apigateway					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, Zuul
 	
 FILE
 	configuration.properties
