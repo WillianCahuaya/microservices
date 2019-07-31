@@ -1,0 +1,9 @@
+Download ZipKin: 
+https://github.com/openzipkin/zipkin/tree/master/zipkin-server 
+
+Set ClassPath with Command line
+>set RABBIT_URI=amqp://localhost
+>java -jar zipkin-server-2.7.0-exec.jar
+
+URI to Validate
+http://localhost:9411/zipkin/

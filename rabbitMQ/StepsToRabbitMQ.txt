@@ -1,0 +1,18 @@
+Downloads:
+************************************
+https://www.rabbitmq.com/install-windows.html 	(rabbitmq-server....exe)
+https://www.erlang.org/downloads				(OTP ##.0 Windows 64-bit Binary File (94094976))
+
+Installation
+************************************
+1- ATP_Win64
+2- RabitMQ
+
+Enable GUI (graphical user interface)
+*************************************
+RAIZ_INSTALACION\RabbitMQ Server\rabbitmq_server-3.7.8\sbin
+>> rabbitmq-plugins enable rabbitmq_management
+
+URI
+http://localhost:15672 
+User: guest Password: guest Rol: Administrator

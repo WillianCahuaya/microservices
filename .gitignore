@@ -16,11 +16,16 @@
 */*/*.ipr
 .scannerwork
 
+*/*/.mvn/
 */*/target/
 */*/mvnw
 */*/mvnw.cmd
 
 ### EXTRA ###
+*/*/*.exe
+*/*.exe
+*/*/*.jar
+*/*.jar
 */*.zip
 */*.pdf
 *.pdf

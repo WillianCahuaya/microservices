@@ -1,8 +1,11 @@
 package com.boomdev.onlinesale.onlinesalemsbusquery.controller;
 
 import com.boomdev.onlinesale.onlinesalemsbusquery.client.BillingClient;
+import com.boomdev.onlinesale.onlinesalemsbusquery.client.dto.ClientDto;
+import com.boomdev.onlinesale.onlinesalemsbusquery.client.dto.CompanyDto;
 import com.boomdev.onlinesale.onlinesalemsbusquery.client.dto.ServiceDto;
 import com.boomdev.onlinesale.onlinesalemsbusquery.client.feign.BillingFeignClient;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -40,6 +44,7 @@ public class BillingBusRestController {
 	}
 	
 	@GetMapping("/feign/clients/{clientId}/companies/{companyId}")
+	@HystrixCommand(fallbackMethod="getHystrixService")
 	public List<ServiceDto> getFeignServices(
 	        @PathVariable("clientId")Integer clientId,
 			@PathVariable("companyId") Integer companyId){
@@ -48,5 +53,27 @@ public class BillingBusRestController {
 		logger.info("PROJECT-BUSQUERY-FEIGN: port={}, clientId={}, companyId={}", port, clientId, companyId);
 
 		return billingFeignClient.getServices(clientId, companyId);
+	}
+
+	public List<ServiceDto> getHystrixService(
+			@PathVariable("clientId")Integer clientId,
+			@PathVariable("companyId") Integer companyId){
+
+		String port = enviroment.getProperty(("local.server.port"));
+		logger.info("PROJECT-BUSQUERY-Hystrix: port={}, clientId={}, companyId={}", port, clientId, companyId);
+
+		List<ServiceDto> services = new ArrayList<>();
+		ServiceDto service = new ServiceDto();
+		service.setId(1);
+		ClientDto client = new ClientDto();
+		client.setId(1);
+		client.setFullname("Willian Cahuaya");
+		CompanyDto company = new CompanyDto();
+		company.setId(1);
+		company.setBusinessName("WIYOCARA.SAC");
+		client.setCompany(company);
+		service.setClient(client);
+		services.add(service);
+		return services;
 	}
 }

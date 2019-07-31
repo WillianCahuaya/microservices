@@ -28,6 +28,12 @@ http://localhost:8765/appname-ms-businessquery/ctxpath-ms-businessquery/billing/
 http://localhost:8765/appname-ms-busquery/ctxpath-ms-busquery/billing/clients/1/companies/1
 http://localhost:8765/appname-ms-busquery/ctxpath-ms-busquery/billing/feign/clients/1/companies/1
 
+*****RabbitMQ
+http://localhost:15672
+
+*****ZipKin
+http://localhost:9411/zipkin/
+
 PROJECT
 
 GROUP
@@ -45,8 +51,10 @@ DEPENDENCIES
 	online-sale-ms-discover-server				=SpringBootDevTools, SpringBootActuator, ConfigClient, EurekaServer
 	online-sale-ms-config-server				=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, ConfigServer
 	online-sale-ms-management					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, Lombok, ConfigClient, 
-	online-sale-ms-business-query				=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, Lombok, SpringDataJPA, PostgresSQLDriver, Sleuth
-	online-sale-ms-bus-query					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, Lombok, OpenFeign, Ribbon, Sleuth
+	online-sale-ms-business-query				=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, Lombok, SpringDataJPA, 
+												 PostgresSQLDriver, Sleuth, ZipKin Client, Spring for RabbitMQ
+	online-sale-ms-bus-query					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, Lombok, OpenFeign, 
+												 Ribbon, Sleuth, ZipKin Client, Spring for RabbitMQ, Hystrix
 	online-sale-ms-apigateway					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, Zuul
 	
 FILE
