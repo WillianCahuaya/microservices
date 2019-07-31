@@ -10,11 +10,12 @@ import java.util.List;
 
 
 //@FeignClient(name="appname-ms-businessquery", url="localhost:8081")
-@FeignClient(name="appname-ms-businessquery")
+//@FeignClient(name="appname-ms-businessquery")
+@FeignClient(name="appname-ms-apigateway")
 @RibbonClient(name="appname-ms-businessquery")
 public interface BillingFeignClient {
 
-	@GetMapping(path="/ctxpath-ms-businessquery/billing/clients/{clientId}/companies/{companyId}")
+	@GetMapping(path="/appname-ms-businessquery/ctxpath-ms-businessquery/billing/clients/{clientId}/companies/{companyId}")
 	List<ServiceDto> getServices(
             @PathVariable("clientId") Integer clientId,
             @PathVariable("companyId") Integer companyId);

@@ -3,6 +3,10 @@ ENDPOINT
 *****discoverserver
 http://localhost:8761/
 
+
+*****discoverserver
+http://localhost:8761/
+
 *****configserver
 http://localhost:8888/ctxpath-ms-configserver/connection/asus
 http://localhost:8888/ctxpath-ms-configserver/configuration/asus
@@ -19,6 +23,11 @@ http://localhost:8081/ctxpath-ms-businessquery/billing/clients/1/companies/1
 http://localhost:8091/ctxpath-ms-busquery/billing/clients/1/companies/1
 http://localhost:8091/ctxpath-ms-busquery/billing/feign/clients/1/companies/1
 
+*****apigateway
+http://localhost:8765/appname-ms-businessquery/ctxpath-ms-businessquery/billing/clients/1/companies/1
+http://localhost:8765/appname-ms-busquery/ctxpath-ms-busquery/billing/clients/1/companies/1
+http://localhost:8765/appname-ms-busquery/ctxpath-ms-busquery/billing/feign/clients/1/companies/1
+
 PROJECT
 
 GROUP
@@ -30,6 +39,7 @@ ARTIFACT								 		 PORT		 CONTEXT_-PATH			 		 APPLICATION-NAME
 	online-sale-ms-management					|8084		|ctxpath-ms-management			|configuration (name of file)
 	online-sale-ms-business-query				|8081		|ctxpath-ms-businessquery		|appname-ms-businessquery
 	online-sale-ms-bus-query					|8091		|ctxpath-ms-busquery			|appname-ms-busquery
+	online-sale-ms-apigateway					|8765		|ctxpath-ms-apigateway			|appname-ms-apigateway
 	
 DEPENDENCIES
 	online-sale-ms-discover-server				=SpringBootDevTools, SpringBootActuator, ConfigClient, EurekaServer
@@ -37,6 +47,7 @@ DEPENDENCIES
 	online-sale-ms-management					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, ConfigClient, SpringWebStarter
 	online-sale-ms-business-query				=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, SpringDataJPA, PostgresSQLDriver, lombok
 	online-sale-ms-bus-query					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter, EurekaDiscoveryClient, OpenFeign, Ribbon
+	online-sale-ms-bus-query					=SpringBootDevTools, SpringBootActuator, EurekaDiscoveryClient, SpringWebStarter
 	
 FILE
 	configuration.properties

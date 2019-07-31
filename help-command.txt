@@ -14,3 +14,5 @@ JAVA COMMAND
 java -jar file.jar
 java -jar -Dspring-profile-s-active=prd file.jar
 java -jar -Dserver-port=8889 online-sale-ms-configserver-1.0.0.jar
+
+java -jar -Dserver-port=8082 onlinesale-msbusinessquery.jar
