@@ -1,11 +1,11 @@
 package com.boomdev.onlinesale.onlinesalemsbusinessquery.controller.mapper;
 
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.controller.dto.ClientDto;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.controller.dto.ProductDto;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.controller.dto.ServiceDto;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.model.ClientModel;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.model.ProductModel;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.model.ServiceModel;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ClientDto;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ProductDto;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ServiceDto;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.ClientModel;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.ProductModel;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.ServiceModel;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

@@ -1,8 +1,8 @@
 package com.boomdev.onlinesale.onlinesalemsmanagement.controller;
 
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.configuration.DataConnectionModel;
 import com.boomdev.onlinesale.onlinesalemsmanagement.client.ConfigurationDataSource;
 import com.boomdev.onlinesale.onlinesalemsmanagement.mapper.DataConnectionMapper;
-import com.boomdev.onlinesale.onlinesalemsmanagement.model.DataConnectionModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -30,6 +30,7 @@ http://localhost:8765/appname-ms-busquery/ctxpath-ms-busquery/billing/feign/clie
 
 *****RabbitMQ
 http://localhost:15672
+guest/guest
 
 *****ZipKin
 http://localhost:9411/zipkin/
@@ -46,6 +47,7 @@ ARTIFACT								 		 PORT		 CONTEXT_-PATH			 		 APPLICATION-NAME
 	online-sale-ms-business-query				|8081		|ctxpath-ms-businessquery		|appname-ms-businessquery
 	online-sale-ms-bus-query					|8091		|ctxpath-ms-busquery			|appname-ms-busquery
 	online-sale-ms-apigateway					|8765		|								|appname-ms-apigateway
+	online-sale-ms-security						|8765		|								|appname-ms-apigateway
 	
 DEPENDENCIES
 	online-sale-ms-discover-server				=SpringBootDevTools, SpringBootActuator, ConfigClient, EurekaServer

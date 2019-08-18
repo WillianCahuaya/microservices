@@ -1,7 +1,7 @@
 package com.boomdev.onlinesale.onlinesalemsbusinessquery.data.dao;
 
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.ServiceModel;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.exception.AppException;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.model.ServiceModel;
 
 import java.util.List;
 

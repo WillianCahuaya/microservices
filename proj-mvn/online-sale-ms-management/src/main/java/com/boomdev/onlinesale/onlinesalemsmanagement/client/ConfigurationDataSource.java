@@ -1,6 +1,6 @@
 package com.boomdev.onlinesale.onlinesalemsmanagement.client;
 
-import com.boomdev.onlinesale.onlinesalemsmanagement.entity.ConnectionEntity;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.entity.configuration.ConnectionEntity;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 

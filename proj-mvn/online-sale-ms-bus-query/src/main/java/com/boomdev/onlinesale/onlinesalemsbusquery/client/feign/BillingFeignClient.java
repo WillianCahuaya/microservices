@@ -1,6 +1,6 @@
 package com.boomdev.onlinesale.onlinesalemsbusquery.client.feign;
 
-import com.boomdev.onlinesale.onlinesalemsbusquery.client.dto.ServiceDto;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ServiceDto;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

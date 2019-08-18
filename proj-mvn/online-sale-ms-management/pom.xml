@@ -20,6 +20,13 @@
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>com.boomdev.onlinesale</groupId>
+			<artifactId>online-sale-bean-business</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>

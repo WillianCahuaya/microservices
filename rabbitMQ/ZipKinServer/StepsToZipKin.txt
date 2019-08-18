@@ -1,5 +1,5 @@
 Download ZipKin: 
-https://github.com/openzipkin/zipkin/tree/master/zipkin-server 
+https://github.com/openzipkin/zipkin/tree/master/zipkin-server
 
 Set ClassPath with Command line
 >set RABBIT_URI=amqp://localhost

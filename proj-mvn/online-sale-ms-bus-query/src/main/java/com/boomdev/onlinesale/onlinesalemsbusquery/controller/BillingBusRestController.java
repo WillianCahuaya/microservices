@@ -1,9 +1,9 @@
 package com.boomdev.onlinesale.onlinesalemsbusquery.controller;
 
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ClientDto;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.CompanyDto;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ServiceDto;
 import com.boomdev.onlinesale.onlinesalemsbusquery.client.BillingClient;
-import com.boomdev.onlinesale.onlinesalemsbusquery.client.dto.ClientDto;
-import com.boomdev.onlinesale.onlinesalemsbusquery.client.dto.CompanyDto;
-import com.boomdev.onlinesale.onlinesalemsbusquery.client.dto.ServiceDto;
 import com.boomdev.onlinesale.onlinesalemsbusquery.client.feign.BillingFeignClient;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;

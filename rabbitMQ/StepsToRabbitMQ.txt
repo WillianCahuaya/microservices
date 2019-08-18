@@ -14,5 +14,7 @@ RAIZ_INSTALACION\RabbitMQ Server\rabbitmq_server-3.7.8\sbin
 >> rabbitmq-plugins enable rabbitmq_management
 
 URI
-http://localhost:15672 
-User: guest Password: guest Rol: Administrator
+http://localhost:15672
+User: guest 
+Password: guest 
+Rol: Administrator

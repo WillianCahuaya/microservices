@@ -1,6 +1,6 @@
 package com.boomdev.onlinesale.onlinesalemsbusquery.client;
 
-import com.boomdev.onlinesale.onlinesalemsbusquery.client.dto.ServiceDto;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ServiceDto;
 
 import java.util.List;
 

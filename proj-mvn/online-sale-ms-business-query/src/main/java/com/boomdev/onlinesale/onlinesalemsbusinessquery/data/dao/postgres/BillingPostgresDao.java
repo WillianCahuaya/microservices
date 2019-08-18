@@ -1,13 +1,13 @@
 package com.boomdev.onlinesale.onlinesalemsbusinessquery.data.dao.postgres;
 
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.ClientModel;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.ProductModel;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.ServiceModel;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.connection.ConnectionDB;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.dao.BillingDao;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.exception.AppException;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.querysql.Sql;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.querysql.TableField;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.model.ClientModel;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.model.ProductModel;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.model.ServiceModel;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;

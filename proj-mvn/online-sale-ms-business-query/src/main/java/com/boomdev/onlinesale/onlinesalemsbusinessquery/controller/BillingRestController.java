@@ -1,10 +1,10 @@
 package com.boomdev.onlinesale.onlinesalemsbusinessquery.controller;
 
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.controller.dto.ServiceDto;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ServiceDto;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.ServiceModel;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.controller.mapper.ServiceMapper;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.exception.AppException;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.BillingService;
-import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.model.ServiceModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

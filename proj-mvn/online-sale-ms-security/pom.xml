@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.boomdev.onlinesale</groupId>
-	<artifactId>online-sale-ms-business-query</artifactId>
+	<artifactId>online-sale-ms-security</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>online-sale-ms-business-query</name>
+	<name>online-sale-ms-security</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -20,11 +20,6 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.boomdev.onlinesale</groupId>
-			<artifactId>online-sale-bean-business</artifactId>
-			<version>1.0.0</version>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -35,24 +30,17 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -67,12 +55,16 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
-			<scope>provided</scope>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -90,7 +82,6 @@
 	</dependencyManagement>
 
 	<build>
-		<finalName>onlinesale-msbusinessquery</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

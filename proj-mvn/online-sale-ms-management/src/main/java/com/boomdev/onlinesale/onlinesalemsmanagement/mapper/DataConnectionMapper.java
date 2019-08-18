@@ -1,16 +1,16 @@
 package com.boomdev.onlinesale.onlinesalemsmanagement.mapper;
 
-import com.boomdev.onlinesale.onlinesalemsmanagement.entity.DataSourceEntity;
-import com.boomdev.onlinesale.onlinesalemsmanagement.model.DataConnectionModel;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.entity.configuration.DataConnectionEntity;
+import com.boomdev.onlinesale.onlinesalebeanbusiness.model.configuration.DataConnectionModel;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
 @Component
-public class DataConnectionMapper implements Mapper<DataSourceEntity, DataConnectionModel>{
+public class DataConnectionMapper implements Mapper<DataConnectionEntity, DataConnectionModel>{
     
     @Override
-    public DataConnectionModel toModel(DataSourceEntity e) {
+    public DataConnectionModel toModel(DataConnectionEntity e) {
         if(Objects.isNull(e)) return null;
         DataConnectionModel m = new DataConnectionModel();
         m.setDriverclassname(e.getDriverclassname());
@@ -21,9 +21,9 @@ public class DataConnectionMapper implements Mapper<DataSourceEntity, DataConnec
     }
 
     @Override
-    public DataSourceEntity toEntity(DataConnectionModel m) {
+    public DataConnectionEntity toEntity(DataConnectionModel m) {
         if(Objects.isNull(m)) return null;
-        DataSourceEntity e = new DataSourceEntity();
+        DataConnectionEntity e = new DataConnectionEntity();
         e.setDriverclassname(m.getDriverclassname());
         e.setUrl(m.getUrl());
         e.setUsername(m.getUsername());

@@ -1,7 +1,7 @@
 package com.boomdev.onlinesale.onlinesalemsbusquery.client.proxy;
 
+import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ServiceDto;
 import com.boomdev.onlinesale.onlinesalemsbusquery.client.BillingClient;
-import com.boomdev.onlinesale.onlinesalemsbusquery.client.dto.ServiceDto;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

@@ -1,5 +1,6 @@
 package com.boomdev.onlinesale.onlinesalemsbusinessquery.data.connection;
 
+import com.boomdev.onlinesale.onlinesalebeanbusiness.entity.configuration.DataConnectionEntity;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
