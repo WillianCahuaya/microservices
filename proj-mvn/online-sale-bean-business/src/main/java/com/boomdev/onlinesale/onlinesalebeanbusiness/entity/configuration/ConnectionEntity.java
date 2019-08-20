@@ -6,4 +6,6 @@ import lombok.Data;
 public class ConnectionEntity {
 
     private PostgresEntity postgres;
+    private MysqlEntity mysql;
+    private MongodbEntity mongodb;
 }
