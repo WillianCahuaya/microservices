@@ -27,4 +27,14 @@ public class DataConnectionController {
     public DataConnectionModel getDataConnectionReport() {
         return dataConnection.toModel(service.getConnection().getPostgres().getReport());
     }
+
+    @GetMapping("dataconnectionsecurity")
+    public DataConnectionModel getDataConnectionSecurity() {
+        return dataConnection.toModel(service.getConnection().getMysql().getSecurity());
+    }
+
+    @GetMapping("dataconnectiontemporary")
+    public DataConnectionModel getDataConnectionTemporary() {
+        return dataConnection.toModel(service.getConnection().getMongodb().getMain());
+    }
 }
