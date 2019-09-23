@@ -78,7 +78,8 @@ public class BillingPostgresDao implements BillingDao {
 		} finally {
 			try {
 				connDB.closeResources(connDB.getConexion(), rs, null, null, pstmt);
-			} catch (Exception e) {// TODO Auto-generated catch block e.printStackTrace();}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 			return services;
 		}
