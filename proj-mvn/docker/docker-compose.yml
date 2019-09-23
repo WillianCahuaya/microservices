@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  ms-discover-server:
+    image: wcahuaya/ms-discover-server
+    restart: always
+    ports:
+      - '8765:8765'
+
+  ms-config-server:
+    image: wcahuaya/ms-config-server
+    restart: always
+    ports:
+      - '8888:8888'
+    environment:
+      - ip_container=192.168.241.129
+    depends_on:
+      - ms-discover-server
+
+  ms-management:
+    image: wcahuaya/ms-management
+    restart: always
+    ports:
+      - '8084:8084'
+    environment:
+      - ip_container=192.168.241.129
+    depends_on:
+      - ms-discover-server
+      - ms-config-server
