@@ -1,14 +1,16 @@
 server:
-  port: 8761
-  #servlet:
-    #context-path: /ctxpath-ms-discoverserver  #(Mustn't register)
+  port: 8765
+  servlet:
+    context-path: /ctxpath-ms-discoverserver  #(Mustn't register)
 
 spring:
   application:
     name: appname-ms-discoverserver
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8765/ctxpath-ms-discoverserver/eureka/
   server:
     peer-node-read-timeout-ms: 6000

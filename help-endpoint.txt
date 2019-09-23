@@ -1,11 +1,7 @@
 ENDPOINT
 
 *****discoverserver
-http://localhost:8761/
-
-
-*****discoverserver
-http://localhost:8761/
+http://localhost:8761/ctxpath-ms-discoverserver/
 
 *****configserver
 http://localhost:8888/ctxpath-ms-configserver/connection/asus
@@ -41,7 +37,7 @@ GROUP
 	com.boomdev.onlinesale
 
 ARTIFACT								 		 PORT		 CONTEXT_-PATH			 		 APPLICATION-NAME
-	online-sale-ms-discover-server				|8761		|								|appname-ms-discoverserver
+	online-sale-ms-discover-server				|8761		|ctxpath-ms-discoverserver		|appname-ms-discoverserver
 	online-sale-ms-config-server				|8888		|ctxpath-ms-configserver		|appname-ms-configserver
 	online-sale-ms-management					|8084		|ctxpath-ms-management			|configuration (name of file)
 	online-sale-ms-business-query				|8081		|ctxpath-ms-businessquery		|appname-ms-businessquery

@@ -30,5 +30,5 @@ spring:
 
 eureka:
   client:
-    service-url:
-      defaultzone: http://localhost:8761/
+    serviceUrl:
+      defaultZone: http://localhost:8765/ctxpath-ms-discoverserver/eureka/
