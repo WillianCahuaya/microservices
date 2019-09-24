@@ -2,6 +2,7 @@ package com.boomdev.onlinesale.onlinesalemsbusinessquery.controller;
 
 import com.boomdev.onlinesale.onlinesalebeanbusiness.dto.business.ServiceDto;
 import com.boomdev.onlinesale.onlinesalebeanbusiness.model.ServiceModel;
+import com.boomdev.onlinesale.onlinesalemsbusinessquery.client.feign.ConfigurationFeignClient;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.controller.mapper.ServiceMapper;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.data.exception.AppException;
 import com.boomdev.onlinesale.onlinesalemsbusinessquery.service.BillingService;
@@ -31,6 +32,9 @@ public class BillingRestController {
     @Autowired
     private ServiceMapper serviceMapper;
 
+    @Autowired
+    private ConfigurationFeignClient feignClient;
+
     @GetMapping(path = "/clients/{clientId}/companies/{companyId}")
     public List<ServiceDto> getServices(
             @PathVariable("clientId") Integer clientId,
@@ -46,5 +50,12 @@ public class BillingRestController {
             e.printStackTrace();
         }
         return new ArrayList();
+    }
+
+    @GetMapping(path = "/feign")
+    public void getFeign() {
+        System.out.println("Imprimiendo prueba de feign");
+        System.out.println(feignClient.getConfigurationMain());
+        System.out.println("Imprimiendo final de prueba de feign");
     }
 }

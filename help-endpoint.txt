@@ -17,12 +17,10 @@ http://localhost:8081/ctxpath-ms-businessquery/billing/clients/1/companies/1
 
 *****busquery
 http://localhost:8091/ctxpath-ms-busquery/billing/clients/1/companies/1
-http://localhost:8091/ctxpath-ms-busquery/billing/feign/clients/1/companies/1
 
 *****apigateway
-http://localhost:8765/appname-ms-businessquery/ctxpath-ms-businessquery/billing/clients/1/companies/1
-http://localhost:8765/appname-ms-busquery/ctxpath-ms-busquery/billing/clients/1/companies/1
-http://localhost:8765/appname-ms-busquery/ctxpath-ms-busquery/billing/feign/clients/1/companies/1
+http://localhost:8755/appname-ms-businessquery/ctxpath-ms-businessquery/billing/clients/1/companies/1
+http://localhost:8755/appname-ms-busquery/ctxpath-ms-busquery/billing/clients/1/companies/1
 
 *****RabbitMQ
 http://localhost:15672

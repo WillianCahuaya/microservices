@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.boomdev.onlinesale</groupId>
 	<artifactId>online-sale-ms-management</artifactId>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<name>online-sale-ms-management</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -44,6 +44,18 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+
+		<!--Init Apply retry-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.retry</groupId>
+			<artifactId>spring-retry</artifactId>
+			<version>${spring-retry.version}</version>
+		</dependency>
+		<!--End Apply retry-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class DataSourceConfig {
 
-    public static final String URL_CONN = "http://localhost:8084/ctxpath-ms-management/dataconnectionmain";
+    public static final String URL_CONN = "http://192.168.241.129:8084/ctxpath-ms-management/dataconnectionmain";
 
     @Bean(name = "dataSource")
     public DataSource dataSource() {
@@ -31,5 +31,7 @@ public class DataSourceConfig {
         ResponseEntity<DataConnectionEntity> responseEntity = new RestTemplate().getForEntity(URL_CONN, DataConnectionEntity.class);
         return responseEntity.getBody();
     }
+
+
 
 }

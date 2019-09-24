@@ -1,6 +1,15 @@
 version: "3"
 
 services:
+
+  bd-postgres:
+    image: postgres:alpine
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_PASSWORD=password
+
   ms-discover-server:
     image: wcahuaya/ms-discover-server
     restart: always
@@ -24,6 +33,16 @@ services:
       - '8084:8084'
     environment:
       - ip_container=192.168.241.129
+      - profiles_active=docker
     depends_on:
-      - ms-discover-server
       - ms-config-server
+      
+  ms-businessquery:
+    image: wcahuaya/ms-businessquery
+    restart: always
+    ports:
+      - '8081:8081'
+    environment:
+      - ip_container=192.168.241.129
+    depends_on:
+      - ms-management
