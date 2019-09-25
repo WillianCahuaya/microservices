@@ -3,8 +3,8 @@ spring:
     name: configuration #and connection
   cloud:
     config:
-      #uri: http://localhost:8888/ctxpath-ms-configserver
-      uri: http://192.168.241.129:8888/ctxpath-ms-configserver
+      uri: http://localhost:8888/ctxpath-ms-configserver
+      #uri: http://192.168.241.129:8888/ctxpath-ms-configserver
       failFast: true
       retry:
         initialInterval: 3000

@@ -16,7 +16,7 @@ import java.util.Map;
 @Component
 public class BillingProxyClient implements BillingClient {
 
-	private static String URL = "http://localhost:8081/ctxpath-ms-businessquery/billing/clients/{clientId}/companies/{companyId}";
+	private static String URL = "http://192.168.241.129:8081/ctxpath-ms-businessquery/billing/clients/{clientId}/companies/{companyId}";
 
 	@Override
 	public List<ServiceDto> getServices(Integer clientId, Integer companyId) {

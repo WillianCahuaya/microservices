@@ -44,13 +44,13 @@ public class BillingBusRestController {
 	}
 	
 	@GetMapping("/feign/clients/{clientId}/companies/{companyId}")
-	@HystrixCommand(fallbackMethod="getHystrixService")
+	//@HystrixCommand(fallbackMethod="getHystrixService")
 	public List<ServiceDto> getFeignServices(
 	        @PathVariable("clientId")Integer clientId,
 			@PathVariable("companyId") Integer companyId){
 
 		String port = enviroment.getProperty(("local.server.port"));
-		logger.info("PROJECT-BUSQUERY-FEIGN: port={}, clientId={}, companyId={}", port, clientId, companyId);
+		logger.info("PROJECT-BUSQUERY-FEIGN: si port={}, clientId={}, companyId={}", port, clientId, companyId);
 
 		return billingFeignClient.getServices(clientId, companyId);
 	}
